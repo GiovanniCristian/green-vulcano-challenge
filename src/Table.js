@@ -2,6 +2,7 @@ import React from "react";
 import { usePagination, useTable } from "react-table";
 import { useGlobalFilter, useAsyncDebounce} from "react-table";
 
+
 function GlobalFilter({
     preGlobalFilteredRows,
     globalFilter,
@@ -14,10 +15,9 @@ function GlobalFilter({
     }, 200)
   
     return (
-      <span>
-        Search:{' '}
+      <span className="my-5 search-bar">
         <input
-          value={value || ""}
+          value={value || " "}
           onChange={e => {
             setValue(e.target.value);
             onChange(e.target.value);
@@ -61,18 +61,17 @@ function Table({ columns, data }) {
         globalFilter={state.globalFilter}
         setGlobalFilter={setGlobalFilter}
       />
-
-    <table {...getTableProps()} border="1">
-      <thead>
+    <table {...getTableProps()} className="table table-custom my-auto mx-auto">
+      <thead className="thead">
         {headerGroups.map((headerGroup) => (
-          <tr {...headerGroup.getHeaderGroupProps()}>
+          <tr {...headerGroup.getHeaderGroupProps()} className="text-center">
             {headerGroup.headers.map((column) => (
               <th {...column.getHeaderProps()}>{column.render("Header")}</th>
             ))}
           </tr>
         ))}
       </thead>
-      <tbody {...getTableBodyProps()}>
+      <tbody {...getTableBodyProps()} className="text-center">
         {page.map((page, i) => {
           prepareRow(page);
           return (

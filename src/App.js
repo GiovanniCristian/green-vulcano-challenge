@@ -1,87 +1,141 @@
 import React from "react";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.css";
 import Table from "./Table";
 
 const getData = () => [
-  {
-    name: "Jane Cooper",
-    email: "jane.cooper@example.com",
-    title: "Regional Paradigm Technician",
-    department: "Optimization",
-    status: "Active",
-    role: "Admin",
-    imgUrl:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
-  },
-  {
-    name: "Cody Fisher",
-    email: "cody.fisher@example.com",
-    title: "Product Directives Officer",
-    department: "Intranet",
-    status: "Active",
-    role: "Owner",
-    imgUrl:
-      "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
-  },
-  {
-    name: "Esther Howard",
-    email: "esther.howard@example.com",
-    title: "Forward Response Developer",
-    department: "Directives",
-    status: "Active",
-    role: "Member",
-    imgUrl:
-      "https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
-  },
-  {
-    name: "Jenny Wilson",
-    email: "jenny.wilson@example.com",
-    title: "Central Security Manager",
-    department: "Program",
-    status: "Active",
-    role: "Member",
-    imgUrl:
-      "https://images.unsplash.com/photo-1498551172505-8ee7ad69f235?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
-  },
-  {
-    name: "Kristin Watson",
-    email: "kristin.watson@example.com",
-    title: "Lean Implementation Liaison",
-    department: "Mobility",
-    status: "Active",
-    role: "Admin",
-    imgUrl:
-      "https://images.unsplash.com/photo-1532417344469-368f9ae6d187?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
-  },
-  {
-    name: "Cameron Williamson",
-    email: "cameron.williamson@example.com",
-    title: "Internal Applications Engineer",
-    department: "Security",
-    status: "Active",
-    role: "Member",
-    imgUrl:
-      "https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
-  },
-];
+
+{
+  id: 4610,
+  model: "ItemModel01",
+  location: "Via Tal dei Tali, 23 - Roma - 00100",
+  creation_date: "2022-05-14 | 12:30",
+  battery_prc: 95,
+  fuel_prc: 100,
+  damage: 5,
+},
+{
+  id: 4611,
+  model: "ItemModel02",
+  location: "Via Tal dei Tali, 24 - Roma - 00100",
+  creation_date: "2022-05-15 | 16:55",
+  battery_prc: 46,
+  fuel_prc: 50,
+  damage: null
+},
+{
+  id: 4612,
+  model: "ItemModel03",
+  location: "Via Tal dei Tali, 25 - Roma - 00100",
+  creation_date: "2022-05-16 | 22:11",
+  battery_prc: 17,
+  fuel_prc: 25,
+  damage: 3,
+},
+{
+  id: 4613,
+  model: "ItemModel04",
+  location: "Via Tal dei Tali, 26 - Roma - 00100",
+  creation_date: "2022-05-17 | 23:34",
+  battery_prc: 10,
+  fuel_prc: 20,
+  damage: null
+},
+{
+  id: 4614,
+  model: "ItemModel05",
+  location: "Via Tal dei Tali, 27 - Roma - 00100",
+  creation_date: "2022-05-18 | 03:59",
+  battery_prc: 83,
+  fuel_prc: 5,
+  damage: null
+},
+{
+  id: 4615,
+  model: "ItemModel06",
+  location: "Via Tal dei Tali, 28 - Roma - 00100",
+  creation_date: "2022-05-19 | 02:54",
+  battery_prc: 32,
+  fuel_prc: 40,
+  damage: null
+},
+{
+  id: 4616,
+  model: "ItemModel07",
+  location: "Via Tal dei Tali, 29 - Roma - 00100",
+  creation_date: "2022-05-17 | 23:34",
+  battery_prc: 36,
+  fuel_prc: 15,
+  damage: 2,
+},
+{
+  id: 4617,
+  model: "ItemModel08",
+  location: "Via Tal dei Tali, 30 - Roma - 00100",
+  creation_date: "2022-05-20 | 18:22",
+  battery_prc: 76,
+  fuel_prc: 35,
+  damage: 1,
+},
+{
+  id: 4618,
+  model: "ItemModel09",
+  location: "Via Tal dei Tali, 31 - Roma - 00100",
+  creation_date: "2022-05-16 | 22:11",
+  battery_prc: 5,
+  fuel_prc: 15,
+  damage: 8,
+},
+{
+  id: 4619,
+  model: "ItemModel10",
+  location: "Via Tal dei Tali, 32 - Roma - 00100",
+  creation_date: "2022-05-13 | 01:43",
+  battery_prc: 65,
+  fuel_prc: 35,
+  damage: null
+},
+{
+  id: 4620,
+  model: "ItemModel11",
+  location: "Via Tal dei Tali, 33 - Roma - 00100",
+  creation_date: "2022-05-16 | 22:11",
+  battery_prc: 1,
+  fuel_prc: 13,
+  damage: 9,
+},
+]
 
 function App() {
   const columns = React.useMemo(
     () => [
       {
-        Header: "Name",
-        accessor: "name",
+        Header: "Id",
+        accessor: "id",
       },
       {
-        Header: "Title",
-        accessor: "title",
+        Header: "Model",
+        accessor: "model",
       },
       {
-        Header: "Status",
-        accessor: "status",
+        Header: "Location",
+        accessor: "location",
       },
       {
-        Header: "Role",
-        accessor: "role",
+        Header: "Creation Date",
+        accessor: "creation_date",
+      },
+      {
+        Header: "Battery Health",
+        accessor: "battery_prc",
+      },
+      {
+        Header: "Fuel",
+        accessor: "fuel_prc",
+      },
+      {
+        Header: "Damage",
+        accessor: "damage",
       },
     ],
     []
@@ -90,12 +144,9 @@ function App() {
   const data = React.useMemo(() => getData(), []);
 
   return (
-    <>
-      <h1>Già che si vede è un successo!</h1>
       <div>
         <Table columns={columns} data={data} />
       </div>
-    </>
   );
 }
 
