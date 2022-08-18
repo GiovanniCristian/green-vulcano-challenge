@@ -29,6 +29,14 @@ function GlobalFilter({
     )
 }
 
+function CreateItem (){
+  return (
+    <button className="button-item">
+      Add Item
+    </button>
+  );
+}
+
 function Table({ columns, data }) {
   const { 
     getTableProps, 
@@ -55,11 +63,15 @@ function Table({ columns, data }) {
 
   return (
 <>
+<div>
     <GlobalFilter
         preGlobalFilteredRows={preGlobalFilteredRows}
         globalFilter={state.globalFilter}
         setGlobalFilter={setGlobalFilter}
       />
+
+    <CreateItem />
+</div>
     <table {...getTableProps()} className="table-custom m-auto">
       <thead className="thead">
         {headerGroups.map((headerGroup) => (

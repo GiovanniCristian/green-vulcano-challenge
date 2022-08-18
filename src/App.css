@@ -3,9 +3,13 @@
     width: 1200px;
     height: 600px;
     border: 0px solid;
-    border-radius: 5px 0px 5px 5px;
+    border-radius: 0px 0px 7px 7px;
     box-shadow: 0px 3px 18px 0px rgba(0,0,0,0.34); 
     box-shadow: 0px 3px 18px 0px rgba(0,0,0,0.34);
+    background-color: white;
+}
+.table-div {
+    background-color: #002e4a2b;
 }
 
 .thead {
@@ -24,7 +28,8 @@
     box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.34); 
     box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.34);
     margin-left: 350px;
-}
+} 
+
 
 
 /* PAGINATION */
@@ -44,4 +49,14 @@
     border: 1px solid #002E4A;
     border-radius: 10px 0px 10px 10px;
     margin-left: 350px;
+}
+
+.button-item{
+    width: 134px;
+    height: 34px;
+    color: white;
+    background-color: #009C9E;
+    border: 1px solid #009C9E;
+    border-radius: 10px 0px 10px 10px;
+    margin-left: 35%;
 }

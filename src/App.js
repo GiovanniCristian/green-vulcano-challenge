@@ -3,7 +3,6 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import Table from "./Table";
 import Logo from "./logo-table.png";
-import { ExportJsonCsv } from "react-export-json-csv";
 
 
 const getData = () => [
@@ -182,16 +181,27 @@ function App() {
 
   const data = React.useMemo(() => getData(), []);
 
+  const exportData = () => {
+    const jsonString = `data:text/json;chatset=utf-8,${encodeURIComponent(
+      JSON.stringify(data)
+    )}`;
+    const link = document.createElement("a");
+    link.href = jsonString;
+    link.download = "data.json";
+
+    link.click();
+  };
+
   return (
     <>
-      <div className="text-center my-2">
+      <div className="text-center my-4">
         <img src={Logo} alt="logo"/>
       </div>
       <div className="container-fluid table-div">
         <Table columns={columns} data={data}/>
-        <ExportJsonCsv className="button-csv" headers={getData} data={data}>
+        <button type="button" onClick={exportData} className="button-csv mb-5">
           Download CSV
-        </ExportJsonCsv>
+        </button>
       </div>
     </>
   );
