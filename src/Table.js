@@ -15,8 +15,9 @@ function GlobalFilter({
     }, 200)
   
     return (
-      <span className="my-5 search-bar">
+      <span className="">
         <input
+          className="search-bar my-3"
           value={value || " "}
           onChange={e => {
             setValue(e.target.value);
@@ -38,8 +39,6 @@ function Table({ columns, data }) {
     canPreviousPage,
     canNextPage,
     pageOptions,
-    pageCount,
-    gotoPage,
     nextPage,
     previousPage,
     state, 
@@ -61,7 +60,7 @@ function Table({ columns, data }) {
         globalFilter={state.globalFilter}
         setGlobalFilter={setGlobalFilter}
       />
-    <table {...getTableProps()} className="table table-custom my-auto mx-auto">
+    <table {...getTableProps()} className="table-custom m-auto">
       <thead className="thead">
         {headerGroups.map((headerGroup) => (
           <tr {...headerGroup.getHeaderGroupProps()} className="text-center">
@@ -84,25 +83,18 @@ function Table({ columns, data }) {
         })}
       </tbody>
     </table>
-    <div className="pagination">
-        <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
-          {'<<'}
-        </button>{' '}
+      <div className="pagination mt-3">
         <button onClick={() => previousPage()} disabled={!canPreviousPage}>
           {'<'}
         </button>{' '}
-        <button onClick={() => nextPage()} disabled={!canNextPage}>
-          {'>'}
-        </button>{' '}
-        <button onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage}>
-          {'>>'}
-        </button>{' '}
-        <span>
-          Page{' '}
+        <span className="mx-2 my-auto">
           <strong>
             {state.pageIndex + 1} of {pageOptions.length}
           </strong>{' '}
         </span>
+        <button onClick={() => nextPage()} disabled={!canNextPage}>
+          {'>'}
+        </button>{' '}
       </div>
 </>
 

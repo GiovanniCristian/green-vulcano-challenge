@@ -2,6 +2,9 @@ import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import Table from "./Table";
+import Logo from "./logo-table.png";
+import { ExportJsonCsv } from "react-export-json-csv";
+
 
 const getData = () => [
 
@@ -104,6 +107,42 @@ const getData = () => [
   fuel_prc: 13,
   damage: 9,
 },
+{
+  id: 4610,
+  model: "ItemModel01",
+  location: "Via Tal dei Tali, 23 - Roma - 00100",
+  creation_date: "2022-05-14 | 12:30",
+  battery_prc: 95,
+  fuel_prc: 100,
+  damage: 5,
+},
+{
+  id: 4611,
+  model: "ItemModel02",
+  location: "Via Tal dei Tali, 24 - Roma - 00100",
+  creation_date: "2022-05-15 | 16:55",
+  battery_prc: 46,
+  fuel_prc: 50,
+  damage: null
+},
+{
+  id: 4612,
+  model: "ItemModel03",
+  location: "Via Tal dei Tali, 25 - Roma - 00100",
+  creation_date: "2022-05-16 | 22:11",
+  battery_prc: 17,
+  fuel_prc: 25,
+  damage: 3,
+},
+{
+  id: 4613,
+  model: "ItemModel04",
+  location: "Via Tal dei Tali, 26 - Roma - 00100",
+  creation_date: "2022-05-17 | 23:34",
+  battery_prc: 10,
+  fuel_prc: 20,
+  damage: null
+},
 ]
 
 function App() {
@@ -144,10 +183,18 @@ function App() {
   const data = React.useMemo(() => getData(), []);
 
   return (
-      <div>
-        <Table columns={columns} data={data} />
+    <>
+      <div className="text-center my-2">
+        <img src={Logo} alt="logo"/>
       </div>
+      <div className="container-fluid table-div">
+        <Table columns={columns} data={data}/>
+        <ExportJsonCsv className="button-csv" headers={getData} data={data}>
+          Download CSV
+        </ExportJsonCsv>
+      </div>
+    </>
   );
 }
 
-export default App;
+export default App

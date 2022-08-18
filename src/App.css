@@ -1,17 +1,47 @@
-body{
-    background-color:#30303029;
-
-}
-table {
-    background-color: white;
-    border-radius: 12px;
-}
-
-.table-custom{
-    width: 1800px;
+/* TABLE */
+.table-custom {
+    width: 1200px;
     height: 600px;
+    border: 0px solid;
+    border-radius: 5px 0px 5px 5px;
+    box-shadow: 0px 3px 18px 0px rgba(0,0,0,0.34); 
+    box-shadow: 0px 3px 18px 0px rgba(0,0,0,0.34);
 }
 
 .thead {
+    width: 1200px;
+    height: 59px;
     background-color: #EAEAEA;
+}
+
+
+/* SEARCH */
+.search-bar {
+    width: 326px;
+    height: 48px;
+    border: 0px solid;
+    border-radius: 7px 0px 7px 7px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.34); 
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.34);
+    margin-left: 350px;
+}
+
+
+/* PAGINATION */
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 350px;
+    border: 0px solid;
+    border-radius: 7px 0px 7px 7px;
+}
+
+.button-csv{
+    width: 156px;
+    height: 32px;
+    color: white;
+    background-color: #002E4A;
+    border: 1px solid #002E4A;
+    border-radius: 10px 0px 10px 10px;
+    margin-left: 350px;
 }
