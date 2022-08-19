@@ -23,7 +23,7 @@ function GlobalFilter({
             setValue(e.target.value);
             onChange(e.target.value);
           }}
-          placeholder={`${count} records...`}
+          placeholder="Search"
         />
       </span>
     )
@@ -41,8 +41,8 @@ function Table({ columns, data }) {
   const { 
     getTableProps, 
     getTableBodyProps, 
-    headerGroups, 
-    page, 
+    headerGroups,
+    rows,
     prepareRow,
     canPreviousPage,
     canNextPage,
@@ -59,6 +59,7 @@ function Table({ columns, data }) {
     },
     useGlobalFilter,
     usePagination,
+    useAsyncDebounce,
     )
 
   return (
@@ -66,7 +67,7 @@ function Table({ columns, data }) {
 <div>
     <GlobalFilter
         preGlobalFilteredRows={preGlobalFilteredRows}
-        globalFilter={state.globalFilter}
+        globalFilter={globalFilter}
         setGlobalFilter={setGlobalFilter}
       />
 
@@ -83,11 +84,11 @@ function Table({ columns, data }) {
         ))}
       </thead>
       <tbody {...getTableBodyProps()} className="text-center">
-        {page.map((page, i) => {
-          prepareRow(page);
+        {rows.map((rows, i) => {
+          prepareRow(rows);
           return (
-            <tr {...page.getRowProps()}>
-              {page.cells.map((cell) => {
+            <tr {...rows.getRowProps()}>
+              {rows.cells.map((cell) => {
                 return <td {...cell.getCellProps()}>{cell.render("Cell")}</td>;
               })}
             </tr>

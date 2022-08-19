@@ -107,8 +107,8 @@ const getData = () => [
   damage: 9,
 },
 {
-  id: 4610,
-  model: "ItemModel01",
+  id: 4621,
+  model: "ItemModel12",
   location: "Via Tal dei Tali, 23 - Roma - 00100",
   creation_date: "2022-05-14 | 12:30",
   battery_prc: 95,
@@ -116,8 +116,8 @@ const getData = () => [
   damage: 5,
 },
 {
-  id: 4611,
-  model: "ItemModel02",
+  id: 4622,
+  model: "ItemModel13",
   location: "Via Tal dei Tali, 24 - Roma - 00100",
   creation_date: "2022-05-15 | 16:55",
   battery_prc: 46,
@@ -125,8 +125,8 @@ const getData = () => [
   damage: null
 },
 {
-  id: 4612,
-  model: "ItemModel03",
+  id: 4623,
+  model: "ItemModel14",
   location: "Via Tal dei Tali, 25 - Roma - 00100",
   creation_date: "2022-05-16 | 22:11",
   battery_prc: 17,
@@ -134,8 +134,8 @@ const getData = () => [
   damage: 3,
 },
 {
-  id: 4613,
-  model: "ItemModel04",
+  id: 4624,
+  model: "ItemModel15",
   location: "Via Tal dei Tali, 26 - Roma - 00100",
   creation_date: "2022-05-17 | 23:34",
   battery_prc: 10,
