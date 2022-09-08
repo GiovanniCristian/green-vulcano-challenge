@@ -1,3 +1,4 @@
+import "./App.css"
 import React from "react";
 import { usePagination, useTable } from "react-table";
 import { useGlobalFilter, useAsyncDebounce} from "react-table";
@@ -67,7 +68,7 @@ function Table({ columns, data }) {
 <div>
     <GlobalFilter
         preGlobalFilteredRows={preGlobalFilteredRows}
-        globalFilter={globalFilter}
+        globalFilter={setGlobalFilter}
         setGlobalFilter={setGlobalFilter}
       />
 
@@ -87,7 +88,7 @@ function Table({ columns, data }) {
         {rows.map((rows, i) => {
           prepareRow(rows);
           return (
-            <tr {...rows.getRowProps()}>
+            <tr className="line-tr" {...rows.getRowProps()}>
               {rows.cells.map((cell) => {
                 return <td {...cell.getCellProps()}>{cell.render("Cell")}</td>;
               })}

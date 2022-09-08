@@ -4,10 +4,11 @@
     height: 600px;
     border: 0px solid;
     border-radius: 0px 0px 7px 7px;
-    box-shadow: 0px 3px 18px 0px rgba(0,0,0,0.34); 
-    box-shadow: 0px 3px 18px 0px rgba(0,0,0,0.34);
+    box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.34);
+    box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.34);
     background-color: white;
 }
+
 .table-div {
     background-color: #002e4a2b;
 }
@@ -18,6 +19,14 @@
     background-color: #EAEAEA;
 }
 
+.line-tr {
+    border-bottom: 1px solid #EAEAEA;
+    border-radius: 4px 0px 4px 4px;
+}
+
+td {
+    padding: 20px 0px;
+}
 
 /* SEARCH */
 .search-bar {
@@ -25,10 +34,10 @@
     height: 48px;
     border: 0px solid;
     border-radius: 7px 0px 7px 7px;
-    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.34); 
-    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.34);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.34);
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.34);
     margin-left: 350px;
-} 
+}
 
 
 
@@ -41,7 +50,7 @@
     border-radius: 7px 0px 7px 7px;
 }
 
-.button-csv{
+.button-csv {
     width: 156px;
     height: 32px;
     color: white;
@@ -51,7 +60,7 @@
     margin-left: 350px;
 }
 
-.button-item{
+.button-item {
     width: 134px;
     height: 34px;
     color: white;
